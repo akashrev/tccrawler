@@ -135,39 +135,41 @@ class WebData:
         urllib.request.urlretrieve(link, 'image/' + image_name)
         mime = urllib.request.urlopen(link).info()['Content-Type']
 
-        for infile in glob.glob('image/' + image_name):
-            image_dict = dict()
-            try:
-                im = Image.open(infile)
-                width, height = im.size  # image dimensions
+        infile = glob.glob('image/' + image_name)
 
-                if par3 == 'head' or (par3 == 'body' and width>500 and height >500):
+#        for infile in glob.glob('image/' + image_name):
+        image_dict = dict()
+        try:
+            print("1")
+            im = Image.open('image/'+image_name)
+            print("1")
+            width, height = im.size  # image dimensions
+            print("1")
 
-                    print('image is gt 200')
-                    avg = numpy.average(im, axis=0)
-                    numavg = (numpy.average(avg, axis=0))
+            if par3 == 'head' or (par3 == 'body' and width>500 and height >500):
 
-                    image_fetch_time = time.time() - self.image_time
+                print('image is gt 200')
+                avg = numpy.average(im, axis=0)
+                numavg = (numpy.average(avg, axis=0))
 
-                    image_dict['url'] = link
-                    image_dict['width'] = width
-                    image_dict['height'] = height
-                    image_dict['ratio'] = ((float(height) / float(width)) * 100.00)
-                    image_dict['size'] = os.stat(infile).st_size
-                    image_dict['mime'] = mime
-                    image_dict['color'] = (numavg.tolist())
-                    image_dict['image_time'] = image_fetch_time
+                image_fetch_time = time.time() - self.image_time
 
-                    image[(image_name)] = image_dict
-                    f_json["images"] = image_dict
+                image_dict['url'] = link
+                image_dict['width'] = width
+                image_dict['height'] = height
+                image_dict['ratio'] = ((float(height) / float(width)) * 100.00)
+                image_dict['size'] = os.stat(infile).st_size
+                image_dict['mime'] = mime
+                image_dict['color'] = (numavg.tolist())
+                image_dict['image_time'] = image_fetch_time
 
-                    break
-                else:
-                    print ('image is lt 500')
-                    break
-            except Exception as e:
-                print(e)
-            continue
+                image[(image_name)] = image_dict
+                f_json["images"] = image_dict
+
+            else:
+                print ('image is lt 500')
+        except Exception as e:
+            print(e)
 
 
     def body_tag(self):
@@ -191,12 +193,15 @@ class WebData:
                 for ilink in qlist:
                     try:
                         link = ilink
+                        print("is successs?")
                         WebData.image_details(self, link, 'body')
+                        print("is crasherd?")
                     except Exception as e:
                         print(e)
-                    break
+
 
             src_fun(images)
+
             grab_data_from_queue()
         except:
             return 0
