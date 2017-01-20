@@ -20,7 +20,7 @@ import json
 import threading
 import queue
 import numpy
-import tldextract
+#import tldextract
 
 f_json = dict()
 image = dict()
