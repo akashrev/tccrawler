@@ -1,4 +1,5 @@
-from urllib.parse import urlparse
+# from urllib2.parse import urlparse
+import urlparse
 import requests
 
 
@@ -9,7 +10,9 @@ class Fetch:
     def expand_url(self):
         origin = requests.head(self.url, allow_redirects=True).url
         provider = urlparse(origin).netloc
+
         provider_name = provider.split(".")[-2]
+
         provider_url = urlparse(origin).scheme + "://" + urlparse(origin).netloc
         return {
             "url": self.url,
@@ -47,7 +50,8 @@ class Fetch:
                     self.url,
                     headers={
                         'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                                      "Chrome/51.0.2704.106 Safari/537.36"}
+                                      "Chrome/55.0.2883.87 Safari/537.36"
+                    }
                 )
             except Exception as e:
                 print(e)
