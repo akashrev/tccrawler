@@ -3,9 +3,8 @@ import requests
 
 
 class Fetch:
-    def __init__(self, url, data):
+    def __init__(self, url):
         self.url = url
-        self.url_data = data
 
     def expand_url(self):
         origin = requests.head(self.url, allow_redirects=True).url

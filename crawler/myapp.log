@@ -1,0 +1,350 @@
+01/19/2017 04:53:15 PM root         INFO     Program executed.
+01/19/2017 04:53:15 PM root         INFO     Reading input file
+01/19/2017 04:53:15 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:53:15 PM root         INFO     Parsing URL
+01/19/2017 04:53:16 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:53:18 PM root         INFO     Fetching webpage's title
+01/19/2017 04:53:18 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:18 PM root         INFO     Fetching webpage's description
+01/19/2017 04:53:18 PM root         WARNING  Webpage's Description not available
+01/19/2017 04:53:18 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:18 PM root         INFO     Fetching webpage's image
+01/19/2017 04:53:18 PM root         WARNING  Image is not available inside head tag
+01/19/2017 04:53:18 PM root         DEBUG    Calling body_tag() function
+01/19/2017 04:53:18 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 04:53:18 PM root         DEBUG    Calling src_fun function
+01/19/2017 04:53:18 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 04:53:18 PM root         DEBUG    Calling image_details function
+01/19/2017 04:53:18 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 04:53:18 PM root         WARNING  No image link found inside body tag
+01/19/2017 04:53:18 PM root         INFO     Dumping json in json file
+01/19/2017 04:53:18 PM root         INFO     URL's task finished
+
+01/19/2017 04:53:18 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:53:18 PM root         INFO     Parsing URL
+01/19/2017 04:53:19 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:53:20 PM root         INFO     Fetching webpage's title
+01/19/2017 04:53:20 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:20 PM root         INFO     Fetching webpage's description
+01/19/2017 04:53:20 PM root         WARNING  Webpage's Description not available
+01/19/2017 04:53:20 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:20 PM root         INFO     Fetching webpage's image
+01/19/2017 04:53:20 PM root         WARNING  Image is not available inside head tag
+01/19/2017 04:53:20 PM root         DEBUG    Calling body_tag() function
+01/19/2017 04:53:20 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 04:53:20 PM root         DEBUG    Calling src_fun function
+01/19/2017 04:53:20 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 04:53:20 PM root         DEBUG    Calling image_details function
+01/19/2017 04:53:20 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 04:53:20 PM root         WARNING  No image link found inside body tag
+01/19/2017 04:53:20 PM root         INFO     Dumping json in json file
+01/19/2017 04:53:20 PM root         INFO     URL's task finished
+
+01/19/2017 04:53:20 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:53:20 PM root         INFO     Parsing URL
+01/19/2017 04:53:21 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:53:30 PM root         INFO     Fetching webpage's title
+01/19/2017 04:53:30 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:30 PM root         INFO     Fetching webpage's description
+01/19/2017 04:53:30 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:30 PM root         INFO     Fetching webpage's image
+01/19/2017 04:53:30 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:53:30 PM root         INFO     Fetching image details
+01/19/2017 04:53:31 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:53:31 PM root         INFO     Dumping json in json file
+01/19/2017 04:53:31 PM root         INFO     URL's task finished
+
+01/19/2017 04:53:31 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:53:31 PM root         INFO     Parsing URL
+01/19/2017 04:53:32 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:53:32 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:53:32 PM root         INFO     Parsing URL
+01/19/2017 04:53:34 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:53:44 PM root         INFO     Fetching webpage's title
+01/19/2017 04:53:44 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:44 PM root         INFO     Fetching webpage's description
+01/19/2017 04:53:44 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:44 PM root         INFO     Fetching webpage's image
+01/19/2017 04:53:44 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:53:44 PM root         INFO     Fetching image details
+01/19/2017 04:53:45 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:53:45 PM root         INFO     Dumping json in json file
+01/19/2017 04:53:45 PM root         INFO     URL's task finished
+
+01/19/2017 04:53:45 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:53:45 PM root         INFO     Parsing URL
+01/19/2017 04:53:47 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:53:59 PM root         INFO     Fetching webpage's title
+01/19/2017 04:53:59 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:59 PM root         INFO     Fetching webpage's description
+01/19/2017 04:53:59 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:53:59 PM root         INFO     Fetching webpage's image
+01/19/2017 04:53:59 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:53:59 PM root         INFO     Fetching image details
+01/19/2017 04:54:00 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:54:00 PM root         INFO     Dumping json in json file
+01/19/2017 04:54:00 PM root         INFO     URL's task finished
+
+01/19/2017 04:54:00 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:54:00 PM root         INFO     Parsing URL
+01/19/2017 04:54:02 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:54:09 PM root         INFO     Fetching webpage's title
+01/19/2017 04:54:09 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:54:09 PM root         INFO     Fetching webpage's description
+01/19/2017 04:54:09 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:54:09 PM root         INFO     Fetching webpage's image
+01/19/2017 04:54:09 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:54:09 PM root         INFO     Fetching image details
+01/19/2017 04:54:11 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:54:11 PM root         INFO     Dumping json in json file
+01/19/2017 04:54:11 PM root         INFO     URL's task finished
+
+01/19/2017 04:54:11 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:54:11 PM root         INFO     Parsing URL
+01/19/2017 04:54:13 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:54:27 PM root         INFO     Fetching webpage's title
+01/19/2017 04:54:27 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:54:27 PM root         INFO     Fetching webpage's description
+01/19/2017 04:54:27 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:54:27 PM root         INFO     Fetching webpage's image
+01/19/2017 04:54:27 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:54:27 PM root         INFO     Fetching image details
+01/19/2017 04:54:29 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:54:29 PM root         INFO     Dumping json in json file
+01/19/2017 04:54:29 PM root         INFO     URL's task finished
+
+01/19/2017 04:54:29 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:54:29 PM root         INFO     Parsing URL
+01/19/2017 04:54:50 PM root         INFO     Program executed.
+01/19/2017 04:54:50 PM root         INFO     Reading input file
+01/19/2017 04:54:50 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:54:50 PM root         INFO     Parsing URL
+01/19/2017 04:54:52 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:54:55 PM root         INFO     Fetching webpage's title
+01/19/2017 04:54:55 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:54:55 PM root         INFO     Fetching webpage's description
+01/19/2017 04:54:55 PM root         WARNING  Webpage's Description not available
+01/19/2017 04:54:55 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:54:55 PM root         INFO     Fetching webpage's image
+01/19/2017 04:54:55 PM root         WARNING  Image is not available inside head tag
+01/19/2017 04:54:55 PM root         DEBUG    Calling body_tag() function
+01/19/2017 04:54:55 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 04:54:55 PM root         DEBUG    Calling src_fun function
+01/19/2017 04:54:55 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 04:54:55 PM root         DEBUG    Calling image_details function
+01/19/2017 04:54:55 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 04:54:55 PM root         WARNING  No image link found inside body tag
+01/19/2017 04:54:55 PM root         INFO     Dumping json in json file
+01/19/2017 04:54:55 PM root         INFO     URL's task finished
+
+01/19/2017 04:54:55 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:54:55 PM root         INFO     Parsing URL
+01/19/2017 04:54:57 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:55:01 PM root         INFO     Fetching webpage's title
+01/19/2017 04:55:01 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:55:01 PM root         INFO     Fetching webpage's description
+01/19/2017 04:55:01 PM root         WARNING  Webpage's Description not available
+01/19/2017 04:55:01 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:55:01 PM root         INFO     Fetching webpage's image
+01/19/2017 04:55:01 PM root         WARNING  Image is not available inside head tag
+01/19/2017 04:55:01 PM root         DEBUG    Calling body_tag() function
+01/19/2017 04:55:01 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 04:55:01 PM root         DEBUG    Calling src_fun function
+01/19/2017 04:55:01 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 04:55:01 PM root         DEBUG    Calling image_details function
+01/19/2017 04:55:01 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 04:55:01 PM root         WARNING  No image link found inside body tag
+01/19/2017 04:55:01 PM root         INFO     Dumping json in json file
+01/19/2017 04:55:01 PM root         INFO     URL's task finished
+
+01/19/2017 04:55:01 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:55:01 PM root         INFO     Parsing URL
+01/19/2017 04:55:01 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:55:12 PM root         INFO     Fetching webpage's title
+01/19/2017 04:55:12 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:55:12 PM root         INFO     Fetching webpage's description
+01/19/2017 04:55:12 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:55:12 PM root         INFO     Fetching webpage's image
+01/19/2017 04:55:12 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:55:12 PM root         INFO     Fetching image details
+01/19/2017 04:55:14 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:55:14 PM root         INFO     Dumping json in json file
+01/19/2017 04:55:14 PM root         INFO     URL's task finished
+
+01/19/2017 04:55:14 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:55:14 PM root         INFO     Parsing URL
+01/19/2017 04:55:15 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:55:15 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:55:15 PM root         INFO     Parsing URL
+01/19/2017 04:55:17 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:55:17 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:55:17 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:55:17 PM root         INFO     Parsing URL
+01/19/2017 04:55:19 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:55:26 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:55:26 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:55:26 PM root         INFO     Parsing URL
+01/19/2017 04:55:26 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:55:26 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:55:26 PM root         INFO     Parsing URL
+01/19/2017 04:55:35 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:55:35 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:55:35 PM root         INFO     Parsing URL
+01/19/2017 04:58:28 PM root         INFO     Program executed.
+01/19/2017 04:58:28 PM root         INFO     Reading input file
+01/19/2017 04:58:28 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:58:28 PM root         INFO     Parsing URL
+01/19/2017 04:58:29 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:58:31 PM root         INFO     Fetching webpage's title
+01/19/2017 04:58:31 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:58:31 PM root         INFO     Fetching webpage's description
+01/19/2017 04:58:31 PM root         WARNING  Webpage's Description not available
+01/19/2017 04:58:31 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:58:31 PM root         INFO     Fetching webpage's image
+01/19/2017 04:58:31 PM root         WARNING  Image is not available inside head tag
+01/19/2017 04:58:31 PM root         DEBUG    Calling body_tag() function
+01/19/2017 04:58:31 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 04:58:31 PM root         DEBUG    Calling src_fun function
+01/19/2017 04:58:31 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 04:58:31 PM root         DEBUG    Calling image_details function
+01/19/2017 04:58:31 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 04:58:31 PM root         WARNING  No image link found inside body tag
+01/19/2017 04:58:31 PM root         INFO     Dumping json in json file
+01/19/2017 04:58:31 PM root         INFO     URL's task finished
+
+01/19/2017 04:58:31 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:58:31 PM root         INFO     Parsing URL
+01/19/2017 04:58:33 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:58:34 PM root         INFO     Fetching webpage's title
+01/19/2017 04:58:34 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:58:34 PM root         INFO     Fetching webpage's description
+01/19/2017 04:58:34 PM root         WARNING  Webpage's Description not available
+01/19/2017 04:58:34 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:58:34 PM root         INFO     Fetching webpage's image
+01/19/2017 04:58:34 PM root         WARNING  Image is not available inside head tag
+01/19/2017 04:58:34 PM root         DEBUG    Calling body_tag() function
+01/19/2017 04:58:34 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 04:58:34 PM root         DEBUG    Calling src_fun function
+01/19/2017 04:58:34 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 04:58:34 PM root         DEBUG    Calling image_details function
+01/19/2017 04:58:34 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 04:58:34 PM root         WARNING  No image link found inside body tag
+01/19/2017 04:58:34 PM root         INFO     Dumping json in json file
+01/19/2017 04:58:34 PM root         INFO     URL's task finished
+
+01/19/2017 04:58:34 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:58:34 PM root         INFO     Parsing URL
+01/19/2017 04:58:34 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:58:48 PM root         INFO     Fetching webpage's title
+01/19/2017 04:58:48 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:58:48 PM root         INFO     Fetching webpage's description
+01/19/2017 04:58:48 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:58:48 PM root         INFO     Fetching webpage's image
+01/19/2017 04:58:48 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:58:48 PM root         INFO     Fetching image details
+01/19/2017 04:58:49 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:58:49 PM root         INFO     Dumping json in json file
+01/19/2017 04:58:49 PM root         INFO     URL's task finished
+
+01/19/2017 04:58:49 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:58:49 PM root         INFO     Parsing URL
+01/19/2017 04:58:55 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:58:55 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:58:55 PM root         INFO     Parsing URL
+01/19/2017 04:58:58 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:59:15 PM root         INFO     Fetching webpage's title
+01/19/2017 04:59:15 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:59:15 PM root         INFO     Fetching webpage's description
+01/19/2017 04:59:15 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:59:15 PM root         INFO     Fetching webpage's image
+01/19/2017 04:59:15 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:59:15 PM root         INFO     Fetching image details
+01/19/2017 04:59:27 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 04:59:27 PM root         INFO     Dumping json in json file
+01/19/2017 04:59:27 PM root         INFO     URL's task finished
+
+01/19/2017 04:59:27 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:59:27 PM root         INFO     Parsing URL
+01/19/2017 04:59:34 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:59:40 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:59:40 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:59:40 PM root         INFO     Parsing URL
+01/19/2017 04:59:41 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 04:59:41 PM root         DEBUG    Fetching URL from input file
+01/19/2017 04:59:41 PM root         INFO     Parsing URL
+01/19/2017 04:59:42 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 04:59:58 PM root         INFO     Fetching webpage's title
+01/19/2017 04:59:58 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:59:58 PM root         INFO     Fetching webpage's description
+01/19/2017 04:59:58 PM root         DEBUG    Fetched Webpage title
+01/19/2017 04:59:58 PM root         INFO     Fetching webpage's image
+01/19/2017 04:59:58 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 04:59:58 PM root         INFO     Fetching image details
+01/19/2017 05:01:53 PM root         INFO     Program executed.
+01/19/2017 05:01:53 PM root         INFO     Reading input file
+01/19/2017 05:01:53 PM root         DEBUG    Fetching URL from input file
+01/19/2017 05:01:53 PM root         INFO     Parsing URL
+01/19/2017 05:01:54 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 05:01:55 PM root         INFO     Fetching webpage's title
+01/19/2017 05:01:55 PM root         DEBUG    Fetched Webpage title
+01/19/2017 05:01:55 PM root         INFO     Fetching webpage's description
+01/19/2017 05:01:55 PM root         WARNING  Webpage's Description not available
+01/19/2017 05:01:55 PM root         DEBUG    Fetched Webpage title
+01/19/2017 05:01:55 PM root         INFO     Fetching webpage's image
+01/19/2017 05:01:55 PM root         WARNING  Image is not available inside head tag
+01/19/2017 05:01:55 PM root         DEBUG    Calling body_tag() function
+01/19/2017 05:01:55 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 05:01:55 PM root         DEBUG    Calling src_fun function
+01/19/2017 05:01:55 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 05:01:55 PM root         DEBUG    Calling image_details function
+01/19/2017 05:01:55 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 05:01:55 PM root         WARNING  No image link found inside body tag
+01/19/2017 05:01:55 PM root         INFO     Dumping json in json file
+01/19/2017 05:01:55 PM root         INFO     URL's task finished
+
+01/19/2017 05:01:55 PM root         DEBUG    Fetching URL from input file
+01/19/2017 05:01:55 PM root         INFO     Parsing URL
+01/19/2017 05:02:01 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 05:02:02 PM root         INFO     Fetching webpage's title
+01/19/2017 05:02:02 PM root         DEBUG    Fetched Webpage title
+01/19/2017 05:02:02 PM root         INFO     Fetching webpage's description
+01/19/2017 05:02:02 PM root         WARNING  Webpage's Description not available
+01/19/2017 05:02:02 PM root         DEBUG    Fetched Webpage title
+01/19/2017 05:02:02 PM root         INFO     Fetching webpage's image
+01/19/2017 05:02:02 PM root         WARNING  Image is not available inside head tag
+01/19/2017 05:02:02 PM root         DEBUG    Calling body_tag() function
+01/19/2017 05:02:02 PM root         INFO     Fetching img attribute from body tag
+01/19/2017 05:02:02 PM root         DEBUG    Calling src_fun function
+01/19/2017 05:02:02 PM root         INFO     fetching image links having http protocol and appending in a list
+01/19/2017 05:02:02 PM root         DEBUG    Calling image_details function
+01/19/2017 05:02:02 PM root         DEBUG    checking if function called by body tag section
+01/19/2017 05:02:02 PM root         WARNING  No image link found inside body tag
+01/19/2017 05:02:02 PM root         INFO     Dumping json in json file
+01/19/2017 05:02:02 PM root         INFO     URL's task finished
+
+01/19/2017 05:02:02 PM root         DEBUG    Fetching URL from input file
+01/19/2017 05:02:02 PM root         INFO     Parsing URL
+01/19/2017 05:02:02 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 05:02:18 PM root         INFO     Fetching webpage's title
+01/19/2017 05:02:18 PM root         DEBUG    Fetched Webpage title
+01/19/2017 05:02:18 PM root         INFO     Fetching webpage's description
+01/19/2017 05:02:18 PM root         DEBUG    Fetched Webpage title
+01/19/2017 05:02:18 PM root         INFO     Fetching webpage's image
+01/19/2017 05:02:18 PM root         DEBUG    checking if function called by head tag section
+01/19/2017 05:02:18 PM root         INFO     Fetching image details
+01/19/2017 05:02:20 PM root         DEBUG    Dumping image data in JSON file
+01/19/2017 05:02:20 PM root         INFO     Dumping json in json file
+01/19/2017 05:02:20 PM root         INFO     URL's task finished
+
+01/19/2017 05:02:20 PM root         DEBUG    Fetching URL from input file
+01/19/2017 05:02:20 PM root         INFO     Parsing URL
+01/19/2017 05:02:21 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 05:02:21 PM root         DEBUG    Fetching URL from input file
+01/19/2017 05:02:21 PM root         INFO     Parsing URL
+01/19/2017 05:02:21 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 05:02:21 PM root         DEBUG    Fetching URL from input file
+01/19/2017 05:02:21 PM root         INFO     Parsing URL
+01/19/2017 05:02:23 PM root         INFO     Requesting webpage through urllib library
+01/19/2017 05:02:23 PM root         ERROR    Error while fetching URL from input file
+01/19/2017 05:02:23 PM root         DEBUG    Fetching URL from input file
+01/19/2017 05:02:23 PM root         INFO     Parsing URL

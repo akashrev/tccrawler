@@ -1,0 +1,171 @@
+01/20/2017 11:49:49 AM root         INFO     Program executed.
+01/20/2017 11:49:49 AM root         INFO     Reading input file
+01/20/2017 11:49:49 AM root         DEBUG    Fetching URL from input file
+01/20/2017 11:49:49 AM root         INFO     Parsing URL
+01/20/2017 11:49:50 AM root         INFO     Requesting webpage through urllib library
+01/20/2017 11:49:57 AM root         INFO     Program executed.
+01/20/2017 11:49:57 AM root         INFO     Reading input file
+01/20/2017 11:49:57 AM root         DEBUG    Fetching URL from input file
+01/20/2017 11:49:57 AM root         INFO     Parsing URL
+01/20/2017 11:49:57 AM root         INFO     Requesting webpage through urllib library
+01/20/2017 11:50:01 AM root         INFO     Program executed.
+01/20/2017 11:50:01 AM root         INFO     Reading input file
+01/20/2017 11:50:01 AM root         DEBUG    Fetching URL from input file
+01/20/2017 11:50:01 AM root         INFO     Parsing URL
+01/20/2017 11:50:02 AM root         INFO     Requesting webpage through urllib library
+01/20/2017 11:50:10 AM root         INFO     Program executed.
+01/20/2017 11:50:10 AM root         INFO     Reading input file
+01/20/2017 11:50:10 AM root         DEBUG    Fetching URL from input file
+01/20/2017 11:50:10 AM root         INFO     Parsing URL
+01/20/2017 11:50:11 AM root         INFO     Requesting webpage through urllib library
+01/20/2017 11:50:34 AM root         INFO     Program executed.
+01/20/2017 11:50:34 AM root         INFO     Reading input file
+01/20/2017 11:50:34 AM root         DEBUG    Fetching URL from input file
+01/20/2017 11:50:34 AM root         INFO     Parsing URL
+01/20/2017 11:50:51 AM root         INFO     Program executed.
+01/20/2017 11:50:51 AM root         INFO     Reading input file
+01/20/2017 11:50:51 AM root         DEBUG    Fetching URL from input file
+01/20/2017 11:50:51 AM root         INFO     Parsing URL
+01/20/2017 11:50:58 AM root         INFO     Requesting webpage through urllib library
+01/20/2017 11:51:05 AM root         INFO     Fetching webpage's title
+01/20/2017 11:51:05 AM root         DEBUG    Fetched Webpage title
+01/20/2017 11:51:05 AM root         INFO     Fetching webpage's description
+01/20/2017 11:51:05 AM root         DEBUG    Fetched Webpage title
+01/20/2017 11:51:05 AM root         INFO     Fetching webpage's image
+01/20/2017 11:51:05 AM root         WARNING  Image is not available inside head tag
+01/20/2017 11:51:05 AM root         DEBUG    Calling body_tag() function
+01/20/2017 11:51:05 AM root         INFO     Fetching img attribute from body tag
+01/20/2017 11:51:05 AM root         DEBUG    Calling src_fun function
+01/20/2017 11:51:05 AM root         INFO     fetching image links having http protocol and appending in a list
+01/20/2017 11:51:05 AM root         DEBUG    Calling image_details function
+01/20/2017 11:51:05 AM root         DEBUG    checking if function called by body tag section
+01/20/2017 11:51:05 AM root         INFO     Fetching image details
+01/20/2017 11:51:06 AM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing BmpImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing BufrStubImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing CurImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing DcxImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing DdsImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing EpsImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing FitsStubImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing FliImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing FpxImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing FtexImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing GbrImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing GifImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing GribStubImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing IcnsImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing IcoImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing ImImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing ImtImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing IptcImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing JpegImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing McIdasImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing MicImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing MpegImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing MpoImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing MspImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PalmImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PcdImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PcxImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PdfImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PixarImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PngImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PpmImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing PsdImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing SgiImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing SpiderImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing SunImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing TgaImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing TiffImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing WebPImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing WmfImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing XbmImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing XpmImagePlugin
+01/20/2017 11:51:06 AM PIL.Image    DEBUG    Importing XVThumbImagePlugin
+01/20/2017 11:51:07 AM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 11:51:07 AM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+01/20/2017 11:51:07 AM PIL.PngImagePlugin DEBUG    STREAM b'tEXt' 41 25
+01/20/2017 11:51:07 AM PIL.PngImagePlugin DEBUG    STREAM b'iTXt' 78 883
+01/20/2017 11:51:07 AM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 973 56324
+01/20/2017 11:51:07 AM root         DEBUG    Suitable image found
+01/20/2017 11:51:13 AM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 11:51:13 AM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+01/20/2017 11:51:13 AM PIL.PngImagePlugin DEBUG    STREAM b'tEXt' 41 25
+01/20/2017 11:51:13 AM PIL.PngImagePlugin DEBUG    STREAM b'iTXt' 78 883
+01/20/2017 11:51:13 AM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 973 56324
+01/20/2017 11:51:13 AM root         DEBUG    Suitable image found
+01/20/2017 11:51:20 AM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 11:51:20 AM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+01/20/2017 11:51:20 AM PIL.PngImagePlugin DEBUG    STREAM b'tEXt' 41 25
+01/20/2017 11:51:20 AM PIL.PngImagePlugin DEBUG    STREAM b'iTXt' 78 883
+01/20/2017 11:51:20 AM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 973 56324
+01/20/2017 11:51:20 AM root         DEBUG    Suitable image found
+01/20/2017 11:51:20 AM root         DEBUG    Dumping image data in JSON
+01/20/2017 11:51:20 AM root         INFO     Dumping URL parsing and description in json
+01/20/2017 11:52:38 AM root         INFO     Program executed.
+01/20/2017 11:52:38 AM root         INFO     Reading input file
+01/20/2017 11:52:38 AM root         DEBUG    Fetching URL from input file
+01/20/2017 11:52:38 AM root         INFO     Parsing URL
+01/20/2017 11:52:39 AM root         INFO     Requesting webpage through urllib library
+01/20/2017 11:52:41 AM root         INFO     Fetching webpage's title
+01/20/2017 11:52:41 AM root         ERROR    Error while fetching URL from input file
+01/20/2017 12:55:03 PM root         INFO     Program executed.
+01/20/2017 12:55:03 PM root         INFO     Reading input file
+01/20/2017 12:55:03 PM root         DEBUG    Fetching URL from input file
+01/20/2017 12:55:03 PM root         INFO     Parsing URL
+01/20/2017 12:55:04 PM root         INFO     Requesting webpage through urllib library
+01/20/2017 12:55:05 PM root         INFO     Fetching webpage's title
+01/20/2017 12:55:05 PM root         DEBUG    Fetched Webpage title
+01/20/2017 12:55:05 PM root         INFO     Fetching webpage's description
+01/20/2017 12:55:05 PM root         DEBUG    Fetched Webpage title
+01/20/2017 12:55:05 PM root         INFO     Fetching webpage's image
+01/20/2017 12:55:05 PM root         WARNING  Image is not available inside head tag
+01/20/2017 12:55:05 PM root         DEBUG    Calling body_tag() function
+01/20/2017 12:55:05 PM root         INFO     Fetching img attribute from body tag
+01/20/2017 12:55:05 PM root         DEBUG    Calling src_fun function
+01/20/2017 12:55:05 PM root         INFO     fetching image links having http protocol and appending in a list
+01/20/2017 12:55:05 PM root         DEBUG    Calling image_details function
+01/20/2017 12:55:05 PM root         DEBUG    checking if function called by body tag section
+01/20/2017 12:55:05 PM root         INFO     Fetching image details
+01/20/2017 12:55:05 PM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 12:55:06 PM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 12:55:06 PM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 01:23:35 PM root         INFO     Program executed.
+01/20/2017 01:23:35 PM root         INFO     Reading input file
+01/20/2017 01:23:35 PM root         DEBUG    Fetching URL from input file
+01/20/2017 01:23:35 PM root         INFO     Parsing URL
+01/20/2017 01:23:37 PM root         INFO     Requesting webpage through urllib library
+01/20/2017 01:23:38 PM root         INFO     Fetching webpage's title
+01/20/2017 01:23:38 PM root         DEBUG    Fetched Webpage title
+01/20/2017 01:23:38 PM root         INFO     Fetching webpage's description
+01/20/2017 01:23:38 PM root         DEBUG    Fetched Webpage title
+01/20/2017 01:23:38 PM root         INFO     Fetching webpage's image
+01/20/2017 01:23:38 PM root         WARNING  Image is not available inside head tag
+01/20/2017 01:23:38 PM root         DEBUG    Calling body_tag() function
+01/20/2017 01:23:38 PM root         INFO     Fetching img attribute from body tag
+01/20/2017 01:23:38 PM root         DEBUG    Calling src_fun function
+01/20/2017 01:23:38 PM root         INFO     fetching image links having http protocol and appending in a list
+01/20/2017 01:23:38 PM root         DEBUG    Calling image_details function
+01/20/2017 01:23:38 PM root         DEBUG    checking if function called by body tag section
+01/20/2017 01:23:38 PM root         INFO     Fetching image details
+01/20/2017 01:23:39 PM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'tEXt' 41 25
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'iTXt' 78 883
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 973 56324
+01/20/2017 01:23:39 PM root         DEBUG    Suitable image found
+01/20/2017 01:23:39 PM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'tEXt' 41 25
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'iTXt' 78 883
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 973 56324
+01/20/2017 01:23:39 PM root         DEBUG    Suitable image found
+01/20/2017 01:23:39 PM root         DEBUG    Reading image from Secondary Memory
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'tEXt' 41 25
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'iTXt' 78 883
+01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 973 56324
+01/20/2017 01:23:39 PM root         DEBUG    Suitable image found
