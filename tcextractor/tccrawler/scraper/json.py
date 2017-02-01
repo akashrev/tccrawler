@@ -1,5 +1,3 @@
-import time
-from .scraper.main import main
 
 
 def create_json(meta):
@@ -23,7 +21,4 @@ def create_json(meta):
     return data
 
 
-meta = main(input_url,data)
-
-create_json(meta)
 

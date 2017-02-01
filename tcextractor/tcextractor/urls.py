@@ -18,6 +18,6 @@ from django.contrib import admin
 from tccrawler.views import call
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^Image/', call),
+    url(r'^', call),
 
 ]

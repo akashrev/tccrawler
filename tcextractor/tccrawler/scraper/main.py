@@ -1,12 +1,16 @@
 import re
 import time
-# from .Image import Image_size
-from .scraping1 import Scrape
-from .json import create_json
+from .Image import Image_size
+from scraphead import Scrape
+# from .json import create_json
+# from .scraper.main import main
+
 
 def main(input_url, data):
     start = time.time()
+
     scrape_obj = Scrape(input_url["origin"], re.search("https?://[^/]+", input_url["origin"]).group(0), data)
+
     meta = scrape_obj.get_meta()
     meta_time = time.time() - start
     start2 = time.time()
@@ -27,4 +31,4 @@ def main(input_url, data):
         "parse_image_urls_time": meta["parse_image_urls_time"] if "parse_image_urls_time" in meta.keys() else "",
         "total_time": time.time() - start,
     }
-    return create_json(meta)
+    return meta
