@@ -130,7 +130,7 @@ class WebData:
 
                     q.task_done()
 
-            src_fun(images)
+                src_fun(images)
             for i in range(5):
                 t1 = threading.Thread(target=grab_data_from_queue)
                 t1.start()  # start the thread

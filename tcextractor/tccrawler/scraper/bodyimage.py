@@ -2,8 +2,11 @@ from io import BytesIO
 import logging
 from PIL import Image
 from threading import Thread
-from .parser import Fetch
+from parser import Fetch
 
+threads = 4
+image_width = 200
+image_height = 200
 
 class Image_size:
     def __init__(self):
@@ -35,14 +38,66 @@ class Image_size:
         return res
 
 
+    def body_image_fetch(self, link):
+
+        self.image_name = link.split('/').pop()
+        urllib.request.urlretrieve(link, 'image/' + self.image_name)
+        mime = urllib.request.urlopen(link).info()['Content-Type']
+        logging.debug('Reading image from Secondary Memory')
+        infiles = glob.glob('image/' + self.image_name)
+        infile = "".join(infiles)
+
+        print('infile.:', infile)
+        image_json = dict()
+
+        self.im = Image.open(infile)
+        width, height = self.im.size  # image dimensions
+
+        if width < image_width or height < image_height:
+            print('image size is smaller')
+            logging.warning('Image size is smaller')
+
+        else:
+            print("Suitable image found")
+            logging.debug('Suitable image found')
+            self.link = link
+            del (self.image_list[0:len(self.image_list)])
+            self.width = width
+            self.height = height
+            self.mime = mime
 
 
-######
     def get_best_images(self, urls):
         images, header = {}, {"length": 0}
         headers = []
+
+        while urls:
+            if len(urls) > threads:
+                image_sublist = urls[0:threads]
+                del (urls[0:threads])
+            else:
+                image_sublist = urls[0:len(urls)]
+                del (urls[0:len(urls)])
+            # print('a', urls)
+            # print('image_sublist', image_sublist)
+            self.urls =urls
+            t = [Thread(target=Image_size.body_image_fetch, args=(self, url)) for url in image_sublist]
+            for thread in t:
+                thread.start()
+            for thread in t:
+                thread.join()
+
+
+
+
+
+
+
+
+
         for url in urls:
             if url:
+
                 header = Fetch(url, "").get_header()
                 headers.append(header)
             if header:
@@ -67,6 +122,3 @@ class Image_size:
                 self.width = data["width"]
                 res.append(data)
         return res
-
-
-#######

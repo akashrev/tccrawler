@@ -113,7 +113,7 @@ class WebData:
 
         # image
         logging.info('Fetching webpage\'s image')
-        if head.find('meta', {'property': 'og:image'}) and head.find('meta', {'property': 'og:image'}).get('content') != "":
+        if head.find('meta', {'property': 'og:mage'}) and head.find('meta', {'property': 'og:image'}).get('content') != "":
             image = (head.find('meta', {'property': 'og:image'})).get('content')
             print('og:image')
             WebData.image_details(self, image, 'head')
@@ -162,6 +162,7 @@ class WebData:
                         qlist.append(link)
                 else:
                     continue
+        print(qlist)
         logging.debug('Calling src_fun function')
         src_fun(images)
 
@@ -172,6 +173,8 @@ class WebData:
     def image_details(self, links, par3):
         try:
             if par3 == 'body':
+                print(qlist)
+
                 logging.debug('checking if function called by body tag section')
                 if not links:
                     print('Image list is empty')

@@ -21,7 +21,7 @@ class Scrape:
         self.body = "<body([\S\D]+)<\/body>"
         self.image_regex = "<img[^\>]+(?:src|SRC)=\"([^\"]+\.(?=jpe?g|gif|png|tiff|bmp)[^\"]+)\"(?:[^\>]+)?>"
 
-    def correct_url(self, url):
+    def correct_url(self, url):                             # function for correction of Image URL
         if url:
             if url.startswith("//"):
                 return urlparse(self.base_url).scheme + ":" + url.rstrip("\">")
@@ -31,7 +31,7 @@ class Scrape:
             else:
                 return self.base_url + url
 
-    def parse_image_urls(self):
+    def parse_image_urls(self):                             # fetch all image URLs from body tag
         img_urls, comp_url = [], []
         string = search(self.body, self.raw_data)
         if string:
@@ -40,7 +40,7 @@ class Scrape:
                 comp_url.append(self.correct_url(url))
         return comp_url
 
-    def get_meta(self):
+    def get_meta(self):                                         # fetch data from meta tag
         result, res = {}, {}
         response = []
         metas = re.findall(self.meta_regex, self.raw_data)

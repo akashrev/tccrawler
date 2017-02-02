@@ -142,6 +142,7 @@ class WebData:
                 else:
                     continue
         logging.debug('Calling src_fun function')
+        print(qlist)
         src_fun(images)
 
         logging.debug('Calling image_details function')

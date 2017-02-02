@@ -16,18 +16,14 @@ class Fetch:
         urlregex = "((?:http|ftp)s?):\/\/(?:www)?\.?(([^\.]+)\.([^\/\.]+)\.?([^\/\.]+)?\.?([^\/\.]+)?)(.+)?"
 
         if 'com' in re.search(urlregex, origin).group(2).split('.'):  # if '.com' in the end of url, fetcjh just previous word
-            provider_name = re.search(urlregex, origin).group(2).split('.')[-2]
-
-
+            com_index = (re.search(urlregex, origin).group(2).split('.')).index("com")
+            provider_name = re.search(urlregex, origin).group(2).split('.')[com_index-1]
 
         elif origin.split('/')[2].split('.')[0] == 'www':
             provider_name = re.search(urlregex, origin).group(2).split('.')[0]
 
-
-
         elif len(re.search(urlregex, origin).group(2).split('.')) == 2:  # if len of url is 2 then fetch out first word
             provider_name = re.search(urlregex, origin).group(3)
-
 
         elif len(re.search(urlregex, origin).group(2).split('.')) == 3:  # if length of url is 3
             if len(re.search(urlregex, origin).group(5)) == 2:  # if the last word of url is of length 2
@@ -42,7 +38,6 @@ class Fetch:
         else:
             provider_name = re.search(urlregex, origin).group(3)
 
-
         # provider = re.search(urlregex, origin).group(2)
 
         return {
@@ -51,8 +46,6 @@ class Fetch:
             "provider": origin.split('/')[2],
             "provider_name": provider_name,
             "provider_url":  re.search(urlregex, origin).group(1)+"://"+origin.split('/')[2]
-            # a.split('q=').pop().split('&')[0]
-            # "provider_url": re.search(urlregex, origin).group(1)+"://"+provider
         }
 
     def get_url_data(self):
@@ -69,11 +62,6 @@ class Fetch:
             except Exception as e:
                 print(e)
         return response
-
-
-
-
-
 
     def get_header(self):
         header = ""

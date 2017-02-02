@@ -1,0 +1,282 @@
+02/02/2017 03:24:52 PM root         INFO     Program executed.
+02/02/2017 03:24:52 PM root         INFO     Reading input file
+02/02/2017 03:24:52 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:24:52 PM root         INFO     Parsing URL
+02/02/2017 03:24:52 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:24:53 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /%0A HTTP/1.1" 405 0
+02/02/2017 03:24:53 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:24:55 PM root         INFO     Fetching webpage's title
+02/02/2017 03:24:55 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:24:55 PM root         INFO     Fetching webpage's description
+02/02/2017 03:24:55 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:24:55 PM root         INFO     Fetching webpage's image
+02/02/2017 03:24:55 PM root         DEBUG    checking if function called by head tag section
+02/02/2017 03:24:55 PM root         INFO     Fetching image details
+02/02/2017 03:24:55 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 03:24:55 PM root         INFO     Dumping URL parsing and description in json
+02/02/2017 03:24:55 PM root         INFO     Dumping json in json file
+02/02/2017 03:24:55 PM root         INFO     URL's task finished
+
+02/02/2017 03:25:31 PM root         INFO     Program executed.
+02/02/2017 03:25:31 PM root         INFO     Reading input file
+02/02/2017 03:25:31 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:25:31 PM root         INFO     Parsing URL
+02/02/2017 03:25:31 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:25:32 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /%0A HTTP/1.1" 405 0
+02/02/2017 03:25:32 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:25:33 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:25:35 PM root         INFO     Program executed.
+02/02/2017 03:25:35 PM root         INFO     Reading input file
+02/02/2017 03:25:35 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:25:35 PM root         INFO     Parsing URL
+02/02/2017 03:25:35 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:25:36 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /%0A HTTP/1.1" 405 0
+02/02/2017 03:25:36 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:25:37 PM root         INFO     Fetching webpage's title
+02/02/2017 03:25:37 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:25:37 PM root         INFO     Fetching webpage's description
+02/02/2017 03:25:37 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:25:37 PM root         INFO     Fetching webpage's image
+02/02/2017 03:25:37 PM root         WARNING  Image is not available inside head tag
+02/02/2017 03:25:37 PM root         DEBUG    Calling body_tag() function
+02/02/2017 03:25:37 PM root         INFO     Fetching img attribute from body tag
+02/02/2017 03:25:37 PM root         DEBUG    Calling src_fun function
+02/02/2017 03:25:37 PM root         INFO     fetching image links having http protocol and appending in a list
+02/02/2017 03:25:37 PM root         DEBUG    Calling image_details function
+02/02/2017 03:25:37 PM root         DEBUG    checking if function called by body tag section
+02/02/2017 03:25:37 PM root         INFO     Fetching image details
+02/02/2017 03:25:39 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 03:25:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 03:25:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 13873
+02/02/2017 03:25:39 PM root         DEBUG    Suitable image found
+02/02/2017 03:25:39 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 03:25:39 PM root         INFO     Dumping URL parsing and description in json
+02/02/2017 03:25:39 PM root         INFO     Dumping json in json file
+02/02/2017 03:25:39 PM root         INFO     URL's task finished
+
+02/02/2017 03:26:16 PM root         INFO     Program executed.
+02/02/2017 03:26:16 PM root         INFO     Reading input file
+02/02/2017 03:26:16 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:26:16 PM root         INFO     Parsing URL
+02/02/2017 03:26:16 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:27:27 PM root         INFO     Program executed.
+02/02/2017 03:27:27 PM root         INFO     Reading input file
+02/02/2017 03:27:27 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:27:27 PM root         INFO     Parsing URL
+02/02/2017 03:27:27 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:27:28 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /%0A HTTP/1.1" 405 0
+02/02/2017 03:27:28 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:27:34 PM root         INFO     Fetching webpage's title
+02/02/2017 03:27:34 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:27:34 PM root         INFO     Fetching webpage's description
+02/02/2017 03:27:34 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:27:34 PM root         INFO     Fetching webpage's image
+02/02/2017 03:27:34 PM root         WARNING  Image is not available inside head tag
+02/02/2017 03:27:34 PM root         DEBUG    Calling body_tag() function
+02/02/2017 03:27:34 PM root         INFO     Fetching img attribute from body tag
+02/02/2017 03:27:34 PM root         DEBUG    Calling src_fun function
+02/02/2017 03:27:34 PM root         INFO     fetching image links having http protocol and appending in a list
+02/02/2017 03:27:34 PM root         DEBUG    Calling image_details function
+02/02/2017 03:27:34 PM root         DEBUG    checking if function called by body tag section
+02/02/2017 03:27:34 PM root         INFO     Fetching image details
+02/02/2017 03:27:40 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 03:27:40 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 03:27:40 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 13873
+02/02/2017 03:27:40 PM root         DEBUG    Suitable image found
+02/02/2017 03:27:40 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 03:27:40 PM root         INFO     Dumping URL parsing and description in json
+02/02/2017 03:27:40 PM root         INFO     Dumping json in json file
+02/02/2017 03:27:40 PM root         INFO     URL's task finished
+
+02/02/2017 03:29:02 PM root         INFO     Program executed.
+02/02/2017 03:29:02 PM root         INFO     Reading input file
+02/02/2017 03:29:02 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:29:02 PM root         INFO     Parsing URL
+02/02/2017 03:29:02 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:29:03 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /%0A HTTP/1.1" 405 0
+02/02/2017 03:29:03 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:29:05 PM root         INFO     Fetching webpage's title
+02/02/2017 03:29:05 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:29:05 PM root         INFO     Fetching webpage's description
+02/02/2017 03:29:05 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:29:05 PM root         INFO     Fetching webpage's image
+02/02/2017 03:29:05 PM root         WARNING  Image is not available inside head tag
+02/02/2017 03:29:05 PM root         DEBUG    Calling body_tag() function
+02/02/2017 03:29:05 PM root         INFO     Fetching img attribute from body tag
+02/02/2017 03:29:05 PM root         DEBUG    Calling src_fun function
+02/02/2017 03:29:05 PM root         INFO     fetching image links having http protocol and appending in a list
+02/02/2017 03:29:05 PM root         DEBUG    Calling image_details function
+02/02/2017 03:29:05 PM root         DEBUG    checking if function called by body tag section
+02/02/2017 03:29:05 PM root         INFO     Fetching image details
+02/02/2017 03:29:05 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 03:29:05 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 03:29:05 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 13873
+02/02/2017 03:29:05 PM root         DEBUG    Suitable image found
+02/02/2017 03:29:05 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 03:29:05 PM root         INFO     Dumping URL parsing and description in json
+02/02/2017 03:29:05 PM root         INFO     Dumping json in json file
+02/02/2017 03:29:05 PM root         INFO     URL's task finished
+
+02/02/2017 03:37:02 PM root         INFO     Program executed.
+02/02/2017 03:37:02 PM root         INFO     Reading input file
+02/02/2017 03:37:02 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:37:02 PM root         INFO     Parsing URL
+02/02/2017 03:37:02 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:37:03 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /%0A HTTP/1.1" 405 0
+02/02/2017 03:37:03 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:37:04 PM root         INFO     Fetching webpage's title
+02/02/2017 03:37:04 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:37:04 PM root         INFO     Fetching webpage's description
+02/02/2017 03:37:04 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:37:04 PM root         INFO     Fetching webpage's image
+02/02/2017 03:37:04 PM root         WARNING  Image is not available inside head tag
+02/02/2017 03:37:04 PM root         DEBUG    Calling body_tag() function
+02/02/2017 03:37:04 PM root         INFO     Fetching img attribute from body tag
+02/02/2017 03:37:04 PM root         DEBUG    Calling src_fun function
+02/02/2017 03:37:04 PM root         INFO     fetching image links having http protocol and appending in a list
+02/02/2017 03:37:04 PM root         DEBUG    Calling image_details function
+02/02/2017 03:37:04 PM root         DEBUG    checking if function called by body tag section
+02/02/2017 03:37:04 PM root         INFO     Fetching image details
+02/02/2017 03:37:05 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 03:37:05 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 03:37:05 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 13873
+02/02/2017 03:37:05 PM root         DEBUG    Suitable image found
+02/02/2017 03:37:05 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 03:37:05 PM root         INFO     Dumping URL parsing and description in json
+02/02/2017 03:37:05 PM root         INFO     Dumping json in json file
+02/02/2017 03:37:05 PM root         INFO     URL's task finished
+
+02/02/2017 03:39:05 PM root         INFO     Program executed.
+02/02/2017 03:39:05 PM root         INFO     Reading input file
+02/02/2017 03:39:05 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:39:05 PM root         INFO     Parsing URL
+02/02/2017 03:39:05 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:39:05 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /s/ref=amb_link_CtMhWPvkPmmGylGcfBe9PA_14?ie=UTF8&rh=i%3Akitchen%2Cn%3A1380500031%2Ck%3Anight&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-leftnav&pf_rd_r=1ARRAVH6MRM1BYFKGY77&pf_rd_r=1ARRAVH6MRM1BYFKGY77&pf_rd_t=101&pf_rd_p=88198813-408b-472c-a08f-e076df0795c0&pf_rd_p=88198813-408b-472c-a08f-e076df0795c0&pf_rd_i=7102451031%0A HTTP/1.1" 405 0
+02/02/2017 03:39:05 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:39:05 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:39:07 PM root         INFO     Program executed.
+02/02/2017 03:39:07 PM root         INFO     Reading input file
+02/02/2017 03:39:07 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:39:07 PM root         INFO     Parsing URL
+02/02/2017 03:39:07 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:39:09 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /s/ref=amb_link_CtMhWPvkPmmGylGcfBe9PA_14?ie=UTF8&rh=i%3Akitchen%2Cn%3A1380500031%2Ck%3Anight&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-leftnav&pf_rd_r=1ARRAVH6MRM1BYFKGY77&pf_rd_r=1ARRAVH6MRM1BYFKGY77&pf_rd_t=101&pf_rd_p=88198813-408b-472c-a08f-e076df0795c0&pf_rd_p=88198813-408b-472c-a08f-e076df0795c0&pf_rd_i=7102451031%0A HTTP/1.1" 405 0
+02/02/2017 03:39:09 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:39:10 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:40:36 PM root         INFO     Program executed.
+02/02/2017 03:40:36 PM root         INFO     Reading input file
+02/02/2017 03:40:36 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:40:36 PM root         INFO     Parsing URL
+02/02/2017 03:40:36 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:40:36 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /s/ref=amb_link_CtMhWPvkPmmGylGcfBe9PA_14?ie=UTF8&rh=i%3Akitchen%2Cn%3A1380500031%2Ck%3Anight&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-leftnav&pf_rd_r=1ARRAVH6MRM1BYFKGY77&pf_rd_r=1ARRAVH6MRM1BYFKGY77&pf_rd_t=101&pf_rd_p=88198813-408b-472c-a08f-e076df0795c0&pf_rd_p=88198813-408b-472c-a08f-e076df0795c0&pf_rd_i=7102451031%0A HTTP/1.1" 405 0
+02/02/2017 03:40:36 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:40:37 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:40:50 PM root         INFO     Program executed.
+02/02/2017 03:40:50 PM root         INFO     Reading input file
+02/02/2017 03:40:50 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:40:50 PM root         INFO     Parsing URL
+02/02/2017 03:40:50 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:40:51 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /Kartfy-Changing-Colors-Mushroom-Illumination/dp/B01BKEH8F4/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1486030126&sr=1-1&keywords=night%0A HTTP/1.1" 503 0
+02/02/2017 03:40:51 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:40:56 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:40:59 PM root         INFO     Program executed.
+02/02/2017 03:40:59 PM root         INFO     Reading input file
+02/02/2017 03:40:59 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:40:59 PM root         INFO     Parsing URL
+02/02/2017 03:40:59 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:40:59 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /Kartfy-Changing-Colors-Mushroom-Illumination/dp/B01BKEH8F4/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1486030126&sr=1-1&keywords=night%0A HTTP/1.1" 503 0
+02/02/2017 03:40:59 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:41:00 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:41:42 PM root         INFO     Program executed.
+02/02/2017 03:41:42 PM root         INFO     Reading input file
+02/02/2017 03:41:42 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:41:42 PM root         INFO     Parsing URL
+02/02/2017 03:41:42 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:41:42 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /Kartfy-Changing-Colors-Mushroom-Illumination/dp/B01BKEH8F4/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1486030126&sr=1-1&keywords=night%0A HTTP/1.1" 405 0
+02/02/2017 03:41:42 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:41:43 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:41:51 PM root         INFO     Program executed.
+02/02/2017 03:41:51 PM root         INFO     Reading input file
+02/02/2017 03:41:51 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:41:51 PM root         INFO     Parsing URL
+02/02/2017 03:41:51 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:41:51 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /%0A HTTP/1.1" 405 0
+02/02/2017 03:41:51 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:41:52 PM root         INFO     Fetching webpage's title
+02/02/2017 03:41:52 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:41:52 PM root         INFO     Fetching webpage's description
+02/02/2017 03:41:52 PM root         DEBUG    Fetched Webpage title
+02/02/2017 03:41:52 PM root         INFO     Fetching webpage's image
+02/02/2017 03:41:52 PM root         WARNING  Image is not available inside head tag
+02/02/2017 03:41:52 PM root         DEBUG    Calling body_tag() function
+02/02/2017 03:41:52 PM root         INFO     Fetching img attribute from body tag
+02/02/2017 03:41:52 PM root         DEBUG    Calling src_fun function
+02/02/2017 03:41:52 PM root         INFO     fetching image links having http protocol and appending in a list
+02/02/2017 03:41:52 PM root         DEBUG    Calling image_details function
+02/02/2017 03:41:52 PM root         DEBUG    checking if function called by body tag section
+02/02/2017 03:41:52 PM root         INFO     Fetching image details
+02/02/2017 03:41:53 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 03:41:53 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 03:41:53 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 13873
+02/02/2017 03:41:53 PM root         DEBUG    Suitable image found
+02/02/2017 03:41:53 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 03:41:53 PM root         INFO     Dumping URL parsing and description in json
+02/02/2017 03:41:53 PM root         INFO     Dumping json in json file
+02/02/2017 03:41:53 PM root         INFO     URL's task finished
+
+02/02/2017 03:48:59 PM root         INFO     Program executed.
+02/02/2017 03:48:59 PM root         INFO     Reading input file
+02/02/2017 03:48:59 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:48:59 PM root         INFO     Parsing URL
+02/02/2017 03:48:59 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:50:00 PM root         INFO     Program executed.
+02/02/2017 03:50:00 PM root         INFO     Reading input file
+02/02/2017 03:50:00 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:50:00 PM root         INFO     Parsing URL
+02/02/2017 03:50:00 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:50:08 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /Kartfy-Changing-Colors-Mushroom-Illumination/dp/B01BKEH8F4/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1486030126&sr=1-1&keywords=night%0A HTTP/1.1" 405 0
+02/02/2017 03:50:08 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:50:08 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:50:13 PM root         INFO     Program executed.
+02/02/2017 03:50:13 PM root         INFO     Reading input file
+02/02/2017 03:50:13 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:50:13 PM root         INFO     Parsing URL
+02/02/2017 03:50:13 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:50:14 PM requests.packages.urllib3.connectionpool DEBUG    http://www.amazon.in:80 "HEAD /Kartfy-Changing-Colors-Mushroom-Illumination/dp/B01BKEH8F4/ref=sr_1_1?s=kitchen&ie=UTF8&qid=1486030126&sr=1-1&keywords=night%0A HTTP/1.1" 405 0
+02/02/2017 03:50:14 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 03:50:37 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:51:15 PM root         INFO     Program executed.
+02/02/2017 03:51:15 PM root         INFO     Reading input file
+02/02/2017 03:51:15 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:51:15 PM root         INFO     Parsing URL
+02/02/2017 03:51:15 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.amazon.in
+02/02/2017 03:51:40 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:52:21 PM root         INFO     Program executed.
+02/02/2017 03:52:21 PM root         INFO     Reading input file
+02/02/2017 03:52:21 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:52:21 PM root         INFO     Parsing URL
+02/02/2017 03:52:21 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.paytm.com
+02/02/2017 03:52:31 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:52:33 PM root         INFO     Program executed.
+02/02/2017 03:52:33 PM root         INFO     Reading input file
+02/02/2017 03:52:33 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:52:33 PM root         INFO     Parsing URL
+02/02/2017 03:52:33 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.paytm.com
+02/02/2017 03:52:33 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:52:34 PM root         INFO     Program executed.
+02/02/2017 03:52:34 PM root         INFO     Reading input file
+02/02/2017 03:52:34 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:52:34 PM root         INFO     Parsing URL
+02/02/2017 03:52:34 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.paytm.com
+02/02/2017 03:52:34 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:53:25 PM root         INFO     Program executed.
+02/02/2017 03:53:25 PM root         INFO     Reading input file
+02/02/2017 03:53:25 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:53:25 PM root         INFO     Parsing URL
+02/02/2017 03:53:25 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.paytm.com
+02/02/2017 03:53:25 PM root         ERROR    Error while fetching URL from input file
+02/02/2017 03:54:27 PM root         INFO     Program executed.
+02/02/2017 03:54:27 PM root         INFO     Reading input file
+02/02/2017 03:54:27 PM root         DEBUG    Fetching URL from input file
+02/02/2017 03:54:27 PM root         INFO     Parsing URL
+02/02/2017 03:54:27 PM requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): www.paytm.com
+02/02/2017 03:56:51 PM root         ERROR    Error while fetching URL from input file

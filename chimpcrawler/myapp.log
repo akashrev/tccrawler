@@ -169,3 +169,76 @@
 01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'iTXt' 78 883
 01/20/2017 01:23:39 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 973 56324
 01/20/2017 01:23:39 PM root         DEBUG    Suitable image found
+02/02/2017 04:29:56 PM root         INFO     Program executed.
+02/02/2017 04:29:56 PM root         INFO     Reading input file
+02/02/2017 04:29:56 PM root         DEBUG    Fetching URL from input file
+02/02/2017 04:29:56 PM root         INFO     Parsing URL
+02/02/2017 04:30:02 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 04:30:03 PM root         INFO     Fetching webpage's title
+02/02/2017 04:30:03 PM root         DEBUG    Fetched Webpage title
+02/02/2017 04:30:03 PM root         INFO     Fetching webpage's description
+02/02/2017 04:30:03 PM root         DEBUG    Fetched Webpage title
+02/02/2017 04:30:03 PM root         INFO     Fetching webpage's image
+02/02/2017 04:30:03 PM root         WARNING  Image is not available inside head tag
+02/02/2017 04:30:03 PM root         DEBUG    Calling body_tag() function
+02/02/2017 04:30:03 PM root         INFO     Fetching img attribute from body tag
+02/02/2017 04:30:03 PM root         DEBUG    Calling src_fun function
+02/02/2017 04:30:03 PM root         INFO     fetching image links having http protocol and appending in a list
+02/02/2017 04:30:03 PM root         DEBUG    Calling image_details function
+02/02/2017 04:30:03 PM root         DEBUG    checking if function called by body tag section
+02/02/2017 04:30:03 PM root         INFO     Fetching image details
+02/02/2017 04:30:04 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:04 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:04 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:05 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:05 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 04:30:05 PM PIL.PngImagePlugin DEBUG    STREAM b'PLTE' 41 765
+02/02/2017 04:30:05 PM PIL.PngImagePlugin DEBUG    STREAM b'tRNS' 818 35
+02/02/2017 04:30:05 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 865 16090
+02/02/2017 04:30:05 PM root         DEBUG    Suitable image found
+02/02/2017 04:30:05 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 04:30:05 PM root         INFO     Dumping URL parsing and description in json
+02/02/2017 04:30:26 PM root         INFO     Program executed.
+02/02/2017 04:30:26 PM root         INFO     Reading input file
+02/02/2017 04:30:26 PM root         DEBUG    Fetching URL from input file
+02/02/2017 04:30:26 PM root         INFO     Parsing URL
+02/02/2017 04:30:26 PM root         INFO     Requesting webpage through urllib library
+02/02/2017 04:30:28 PM root         INFO     Fetching webpage's title
+02/02/2017 04:30:28 PM root         DEBUG    Fetched Webpage title
+02/02/2017 04:30:28 PM root         INFO     Fetching webpage's description
+02/02/2017 04:30:28 PM root         DEBUG    Fetched Webpage title
+02/02/2017 04:30:28 PM root         INFO     Fetching webpage's image
+02/02/2017 04:30:28 PM root         WARNING  Image is not available inside head tag
+02/02/2017 04:30:28 PM root         DEBUG    Calling body_tag() function
+02/02/2017 04:30:28 PM root         INFO     Fetching img attribute from body tag
+02/02/2017 04:30:28 PM root         DEBUG    Calling src_fun function
+02/02/2017 04:30:28 PM root         INFO     fetching image links having http protocol and appending in a list
+02/02/2017 04:30:28 PM root         DEBUG    Calling image_details function
+02/02/2017 04:30:28 PM root         DEBUG    checking if function called by body tag section
+02/02/2017 04:30:28 PM root         INFO     Fetching image details
+02/02/2017 04:30:29 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'PLTE' 41 765
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'tRNS' 818 35
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 865 16090
+02/02/2017 04:30:29 PM root         DEBUG    Suitable image found
+02/02/2017 04:30:29 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'PLTE' 41 765
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'tRNS' 818 35
+02/02/2017 04:30:29 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 865 16090
+02/02/2017 04:30:29 PM root         DEBUG    Suitable image found
+02/02/2017 04:30:30 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'PLTE' 41 765
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'tRNS' 818 35
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 865 16090
+02/02/2017 04:30:30 PM root         DEBUG    Suitable image found
+02/02/2017 04:30:30 PM root         DEBUG    Reading image from Secondary Memory
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'PLTE' 41 765
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'tRNS' 818 35
+02/02/2017 04:30:30 PM PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 865 16090
+02/02/2017 04:30:30 PM root         DEBUG    Suitable image found
+02/02/2017 04:30:30 PM root         DEBUG    Dumping image data in JSON
+02/02/2017 04:30:30 PM root         INFO     Dumping URL parsing and description in json

@@ -15,6 +15,7 @@ def call(request):
         url = Fetch(request.POST.get("textfield", None), "").expand_url()           # fetch url details
 
         raw_data = Fetch(url["origin"], "").get_url_data()                          # fetch url data
+
         meta = main(url, raw_data)
 
         data = create_json(meta)

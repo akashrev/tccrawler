@@ -11,14 +11,17 @@ def main(input_url, data):
 
     scrape_obj = Scrape(input_url["origin"], re.search("https?://[^/]+", input_url["origin"]).group(0), data)
 
-    meta = scrape_obj.get_meta()
+    meta = scrape_obj.get_meta()                                    # fetch webpage details from meta tag
     meta_time = time.time() - start
     start2 = time.time()
     if meta["image"] is None or not meta["image"]:
-        parse_image_urls = scrape_obj.parse_image_urls()
+        parse_image_urls = scrape_obj.parse_image_urls()            # all image URLs
         meta["parse_image_urls_time"] = time.time() - start2
         start3 = time.time()
+
         image_data = Image_size().get_best_images(urls=parse_image_urls)
+
+
         meta["image"] = image_data
         meta["image_data"] = time.time() - start3
 
