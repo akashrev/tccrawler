@@ -9,6 +9,7 @@ class Image_size:
     def __init__(self):
         self.allowed_types = ['image/jpeg', 'text/html', 'image/jpg', 'image/png', 'image/gif', 'image/webp',
                               'image/tiff', 'image/bmp', ""]
+        self.threads = 4
         self.width = 300
         self.height = 300
 
@@ -34,10 +35,57 @@ class Image_size:
             logging.exception("ERROR message")
         return res
 
+    def body_image_fetch(url, data):
+
+        response = Fetch(url, "").get_url_data()
+
+        i = Image.open(BytesIO(response.content))
+
+        i = i.__dict__
+        res = {'mode': i['mode'], 'height': i['size'][0], 'width': i['size'][1],
+               'mime': response.headers.get('Content-Type'),
+               'size': response.headers.get('content-length'), 'url: ': url}
+        data.append(res)
+
+    def get_best_images(self, urls):
+        while urls:
+            data = []
+            n_item = []
+            n_threads = []
+            if len(urls) > self.threads:
+                image_sublist = urls[0:self.threads]
+                print(image_sublist)
+                del (urls[0:self.threads])
+            else:
+                image_sublist = urls[0:len(urls)]
+                del (urls[0:len(urls)])
+            for url in image_sublist:
+                t = Thread(target=Image_size.body_image_fetch, args=(url, data))
+                t.start()
+                n_threads.append(t)
+
+                for thread in n_threads:
+                    thread.join()
+            print('threading done')
+            for item in data:
+                # print(item)
+                if item['height'] > self.height and item['width'] > self.width:
+                    n_item = item
+                    self.height = item['height']
+                    self.width = item['width']
+                else:
+                    continue
+            if not n_item:
+                continue
+            else:
+                print(n_item)
+                return [n_item]
+            break
 
 
 
-######
+
+'''
     def get_best_images(self, urls):
         images, header = {}, {"length": 0}
         headers = []
@@ -68,5 +116,4 @@ class Image_size:
                 res.append(data)
         return res
 
-
-#######
+'''

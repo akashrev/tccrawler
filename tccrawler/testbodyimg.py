@@ -3,10 +3,12 @@ import requests
 from threading import Thread
 from io import BytesIO
 
-threads = 4
+# f_json = dict()
+# image = dict()
 
-f_json = dict()
-image = dict()
+threads = 4
+height = 400
+width = 400
 
 urls = ['http://g-ecx.images-amazon.com/images/G/31/gno/sprites/nav-sprite-global_bluebeacon-1x_optimized._CB295619377_.png',
             'http://g-ecx.images-amazon.com/images/G/31/x-locale/common/transparent-pixel._CB386942716_.gif',
@@ -39,19 +41,10 @@ def body_image_fetch(url,data):
     res = {'mode': i['mode'], 'height': i['size'][0], 'width': i['size'][1], 'mime':response.headers.get('Content-Type'),
                'size':response.headers.get('content-length'), 'url: ':url}
     data.append(res)
-    #
-    # print('mode: ',i['mode'])
-    # # print(i['size'])
-    # print('height: ',i['size'][0])
-    # print('width: ',i['size'][1])
-    #
-    # print('mime: ',response.headers.get('Content-Type'))
-    # print('size: ',response.headers.get('content-length'))
-    # return i_json
-
 
 while urls:
     data = []
+    n_item = []
     n_threads = []
     if len(urls) > threads:
         image_sublist = urls[0:threads]
@@ -64,21 +57,81 @@ while urls:
     # print('image_sublist', image_sublist)
     # self.urls = urls
     for url in image_sublist:
-        print (str(url))
         t = Thread(target=body_image_fetch, args=(url,data))
         t.start()
         n_threads.append(t)
 
         for thread in n_threads:
             thread.join()
-
-        for image_data in data :
-            print(image_data)
-            if(image_data['height']>200 and image_data['width']>200):
-                print('..................',image_data)
-                break
+    print('threading done')
+    for item in data:
+        # print(item)
+        if item['height'] > height and item['width'] > width:
+            n_item = item
+            height = item['height']
+            width = item['width']
+        else:
+            continue
+    # print('f_______',n_item)
+    if not n_item:
+        continue
+    else:
+        print ('final', n_item)
+        print(type([n_item]))
         break
+
+
+'''
+
+    i = 0
+    while i < len(data):
+        print(data[i])
+        if data[i]['height'] > height and data[i]['width'] > width:
+            # n_item = item
+            height = data[i]['height']
+            width = data[i]['width']
+            if i != 0:
+                data.pop(i-1)
+        else:
+            # print(data)
+            data.pop(i)
+        i = i + 1
+    if not data:
+        continue
+    else:
+        print('f_data',data)
+        break
+
+
+'''
+
+'''
+    # while len(data)>1:
+    for c, image_data in enumerate(data):
+        print(c)
+        print('data', data)
+        print('image data',image_data)
+        print('\n\n')
+
+        if image_data['height'] > height and image_data['width'] > width:
+            print('better image ',image_data)
+            height = image_data['height']
+            width = image_data['width']
+
+            print(height, width)
+            print('old data list', data)
+            if data[(c-1)>0]:
+                print('yes')
+                print(c)
+                del data[c-1]
+                print('new data list', data)
+                print('\n\n')
+            else:
+                print('no')
+        else:
+            print('image size is not suff', c)
+            print('to delete', data[c])
+            del data[c]
+    print('f_data', data)
     break
-
-        # print(target)
-
+'''

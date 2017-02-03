@@ -1,6 +1,5 @@
 import re
-# from urllib.parse import urlparse
-from urlparse import urlparse
+from urllib.parse import urlparse
 from .Image import Image_size
 from .parser import Fetch
 
@@ -102,13 +101,13 @@ class Scrape:
         else:
             result["code"] = ""
 
-        if '"og:image"' in key:
+        if '"og:mage"' in key:
             image = Image_size().get_image_dimension(self.correct_url(res['"og:image"']), response, 0)
             result["image"] = image
-        elif '"twitter:image"' in key:
+        elif '"twitter:mage"' in key:
             image = Image_size().get_image_dimension(self.correct_url(res['"twitter:image"']), response, 0)
             result["image"] = image
-        elif '"twitter:image:src"' in key:
+        elif '"twitter:mage:src"' in key:
             image = Image_size().get_image_dimension(self.correct_url(res['"twitter:image:src"']), response, 0)
             result["image"] = image
         else:

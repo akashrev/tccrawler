@@ -1,7 +1,7 @@
 import re
 import time
 from .Image import Image_size
-from scraphead import Scrape
+from .scraphead import Scrape
 # from .json import create_json
 # from .scraper.main import main
 

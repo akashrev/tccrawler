@@ -1,5 +1,5 @@
 # import libraries
-import urlparser                            # personal library
+# import urlparser                            # personal library
 import time
 import urllib
 from urllib.request import Request
