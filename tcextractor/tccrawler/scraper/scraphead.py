@@ -1,7 +1,7 @@
 import re
 from urllib.parse import urlparse
+from ..embed.code import embed_video
 from .Image import Image_size
-from .parser import Fetch
 
 
 def search(pattern, string):
@@ -10,106 +10,128 @@ def search(pattern, string):
 
 
 class Scrape:
-    def __init__(self, url, base_url, data):
-        self.url = self.correct_url(url)
-        self.raw_data = Fetch(url, data).get_content()
-        self.base_url = base_url
+    def __init__(self, url, data):
+        self.base_url = url["provider_url"]
+        self.url = url
+        self.raw_data = data.text.replace("\n", "")
         self.head = "<head([\S\D]+)</head>"
-        self.meta_regex = "<meta(?:[^=]+)=(\"[^\"]+\")(?:([^=/>]+)=\"([^\"]+)\")?(?:([^=>/]+)=\"([^\"]+)\")?([^>]+)?>"
+        self.meta_regex = "<meta(?:\s+)?([^=]+)=\"([^\"]+)\"(?:(?:\s+)?([^=/>]+)=\"([^\"]+)\")?(?:(?:\s+)?([^=>/]+)=\"([^\"]+)\")?(?:[^>]+)?>"
         self.title_regex = "<title>([^>]+)<\/title>"
-        self.body = "<body([\S\D]+)<\/body>"
-        self.image_regex = "<img[^\>]+(?:src|SRC)=\"([^\"]+\.(?=jpe?g|gif|png|tiff|bmp)[^\"]+)\"(?:[^\>]+)?>"
+        self.body = "<body([\S\D]+)(<\/body ?>)?"
+        self.image_regex = "<(?:img|IMG)[^\>]+(?:src|SRC)=(?:\'|\")([^\'\"]+\.(?:(?=jpe?g|gif|png|tiff|bmp|jpg)|(?=JPE?G|GIF|PNG|TIFF|BMP))[^\'\"]+)(?:\'|\")(?:[^\>]+)?>"
 
-    def correct_url(self, url):                             # function for correction of Image URL
+    def correct_url(self, url):
         if url:
+            # print(url,self.base_url)
             if url.startswith("//"):
-                return urlparse(self.base_url).scheme + ":" + url.rstrip("\">")
-
+                print(url)
+                print(self.url)
+                return self.url["scheme"] + ":" + url.rstrip("\">")
             elif url.startswith("http"):
                 return url
-            else:
+            elif url.startswith(".."):
                 return self.base_url + url
+            elif url.startswith("/"):
+                return self.base_url + url
+            else:
+                _url = urlparse(self.url["origin"])
+                path = "/".join(_url.path.split('/')[1:-1])
+                return _url.scheme + "://" + _url.netloc + "/" + path + "/" + url
 
     def parse_image_urls(self):                             # fetch all image URLs from body tag
+        # print(',,,,,,,,,,')
         img_urls, comp_url = [], []
         string = search(self.body, self.raw_data)
+        print(string)
         if string:
             img_urls.extend(re.findall(self.image_regex, string.group(1)))
+            print('image urls',img_urls)
             for url in set(img_urls):
                 comp_url.append(self.correct_url(url))
+        print(comp_url)
         return comp_url
 
-    def get_meta(self):                                         # fetch data from meta tag
+    def get_meta(self):
         result, res = {}, {}
         response = []
         metas = re.findall(self.meta_regex, self.raw_data)
+        # print(metas)
         for meta in metas:
-            if " content" in meta:
-                res.update({meta[0]: meta[meta.index(" content") + 1]})
-            elif "content" in meta:
-                res.update({meta[0]: meta[meta.index("content") + 1]})
-
+            if " content" in meta and " property" in meta:
+                res.update({meta[meta.index(" property") + 1]: meta[meta.index(" content") + 1]})
+            elif "content" in meta and "property" in meta:
+                # print('............',meta)
+                res.update({meta[meta.index("property") + 1]: meta[meta.index("content") + 1]})
+                # print(',,,,,,,,,,,',res)
+            elif "content" in meta and "name" in meta:
+                res.update({meta[meta.index("name") + 1]: meta[meta.index("content") + 1]})
+            elif " content" in meta and " name" in meta:
+                res.update({meta[meta.index(" name") + 1]: meta[meta.index(" content") + 1]})
         key = res.keys()
-        if '"og:title"' in key:
-            result["title"] = res['"og:title"']
-        elif '"twitter:title"' in key:
-            result["title"] = res['"twitter:title"']
+
+        if "og:title" in key:
+            result["title"] = res["og:title"]
+        elif "twitter:title" in key:
+            result["title"] = res["twitter:title"]
         elif search(self.title_regex, self.raw_data):
             result["title"] = search(self.title_regex, self.raw_data).group(1)
         else:
             result["title"] = ""
 
-        if '"og:description"' in key:
-            result["description"] = res['"og:description"']
-        elif '"twitter:description"' in key:
-            result["description"] = res['"twitter:description"']
-        elif '"description"' in key:
-            result["description"] = res['"description"']
+        if "og:description" in key:
+            result["description"] = res["og:description"]
+        elif "twitter:description" in key:
+            result["description"] = res["twitter:description"]
+        elif "description" in key:
+            result["description"] = res["description"]
         else:
             result["description"] = ""
 
-        if '"og:video"' in key:
-            result["video"] = res['"og:video"']
-        elif '"og:video:url"' in key:
-            result["video"] = res['"og:video:url"']
-        elif '"og:video:secure_url"' in key:
-            result["video"] = res['"og:video:secure_url"']
+        if "og:video" in key:
+            video = embed_video(res["og:video"])
+            result["video"] = video
+        elif "og:video:url" in key:
+            video = embed_video(res["og:video:url"])
+            result["video"] = video
+        elif "og:video:secure_url" in key:
+            video = embed_video(res["og:video:secure_url"])
+            result["video"] = video
         else:
-            result["video"] = ""
+            result["video"] = None
 
-        if '"og:audio"' in key:
-            result["audio"] = res['"og:audio"']
-        elif '"og:audio:url"' in key:
-            result["audio"] = res['"og:audio:url"']
+        if "og:audio" in key:
+            result["audio"] = res["og:audio"]
+        elif "og:audio:url" in key:
+            result["audio"] = res["og:audio:url"]
         else:
             result["audio"] = ""
 
-        if '"author"' in key:
-            result["author"] = res['"author"']
-        elif '"twitter:author"' in key:
-            result["author"] = res['"twitter:author"']
+        if "author" in key:
+            result["author"] = res["author"]
+        elif "twitter:author" in key:
+            result["author"] = res["twitter:author"]
         else:
             result["author"] = ""
-
-        if '"article:author"' in key:
-            result["author_url"] = res['"article:author"']
+        if "article:author" in key:
+            result["author_url"] = res["article:author"]
         else:
             result["author_url"] = ""
-
         if "code" in key:
             result["code"] = res["code"]
         else:
             result["code"] = ""
-
-        if '"og:mage"' in key:
-            image = Image_size().get_image_dimension(self.correct_url(res['"og:image"']), response, 0)
+        if "og:image" in key:
+            # print(';;;;;;;;;;',key)
+            image = Image_size().body_image_fetch(self.correct_url(res["og:image"]), [])
+            print('yes', image)
             result["image"] = image
-        elif '"twitter:mage"' in key:
-            image = Image_size().get_image_dimension(self.correct_url(res['"twitter:image"']), response, 0)
+        elif "twitter:image" in key:
+            image = Image_size().body_image_fetch(self.correct_url(res["twitter:image"]),[])
             result["image"] = image
-        elif '"twitter:mage:src"' in key:
-            image = Image_size().get_image_dimension(self.correct_url(res['"twitter:image:src"']), response, 0)
+        elif "twitter:image:src" in key:
+            image = Image_size().body_image_fetch(self.correct_url(res["twitter:image:src"]),[])
             result["image"] = image
         else:
             result["image"] = ""
+        # print(result)
         return result

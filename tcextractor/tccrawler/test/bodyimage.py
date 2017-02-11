@@ -2,7 +2,7 @@ from io import BytesIO
 import logging
 from PIL import Image
 from threading import Thread
-from parser import Fetch
+from tccrawler.scraper.parser import Fetch
 
 threads = 4
 image_width = 200

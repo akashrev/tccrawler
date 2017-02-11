@@ -26,7 +26,7 @@ urls = ['http://g-ecx.images-amazon.com/images/G/31/gno/sprites/nav-sprite-globa
 
 
 
-def body_image_fetch(url,data):
+def body_image_fetch(url):
 
     response = requests.get(
         url,
