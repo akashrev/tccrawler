@@ -12,13 +12,10 @@ def main(input_url, data):
     scrape_obj = Scrape(input_url, data)
 
     meta = scrape_obj.get_meta()
-    # print(meta)# fetch webpage details from meta tag
     meta_time = time.time() - start
     start2 = time.time()
     if meta["image"] is None or not meta["image"]:
-        # print('.................')
         parse_image_urls = scrape_obj.parse_image_urls()            # all image URLs
-        print(parse_image_urls)
         meta["parse_image_urls_time"] = time.time() - start2
         start3 = time.time()
         image_data = Image_size().get_best_image(urls=parse_image_urls)
@@ -27,7 +24,7 @@ def main(input_url, data):
 
     meta["url"] = input_url,
     meta["video"] = meta["video"] if "image" in meta.keys() else "",
-    print(meta['video'])
+    # print(meta['video'])
     meta["image"] = meta["image"] if "image" in meta.keys() else "",
     meta["time"] = {
         "get_meta_time": meta_time,
@@ -35,6 +32,5 @@ def main(input_url, data):
         "parse_image_urls_time": meta["parse_image_urls_time"] if "parse_image_urls_time" in meta.keys() else "",
         "total_time": time.time() - start,
     }
-    print((meta['video']))
     meta["poster"] = "" if meta["video"] in [None, (None,)] else meta["image"]
     return meta

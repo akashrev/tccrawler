@@ -29,14 +29,9 @@ class Image_size:
                     in range(3)]
 
     def body_image_fetch(self, url, images_data=None):
-        # images_data=[]
         response = Fetch(url, "").get_url_data()
-        # if response["status"] in [200, '200, 200 OK', '200 OK']:
-        # print(response.headers)
         header = Fetch(url, response).get_header()
-        print('header', header)
-        # print(type(header))
-        # print('test1')
+        # print('header', header)
 
         if header["status"] in [200, '200, 200 OK', '200 OK'] and header["type"] in self.allowed_types:
             print('after condoition',header['status'])
@@ -46,13 +41,11 @@ class Image_size:
                    'mode': image.mode,
                    'width': image.size[1],
                    "mime": str(header["type"]),
-                   'ratio': round((float((image.size[1] / image.size[0]) * 100)),2),
+                   'ratio': round((float((image.size[1] / image.size[0]) * 100)), 2),
                    "colors": Image_size.colour(image),
                    "size": image.size[0]*image.size[1] if header["length"] == 0 else header["length"],
                     'url:': url
             }
-            # print(images_data)
-            print(res)
             images_data.append(res)
             return res
 

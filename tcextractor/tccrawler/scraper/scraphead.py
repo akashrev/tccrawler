@@ -18,19 +18,19 @@ class Scrape:
         self.meta_regex = "<meta(?:\s+)?([^=]+)=\"([^\"]+)\"(?:(?:\s+)?([^=/>]+)=\"([^\"]+)\")?(?:(?:\s+)?([^=>/]+)=\"([^\"]+)\")?(?:[^>]+)?>"
         self.title_regex = "<title>([^>]+)<\/title>"
         self.body = "<body([\S\D]+)(<\/body ?>)?"
-        self.image_regex = "<(?:img|IMG)[^\>]+(?:src|SRC)=(?:\'|\")([^\'\"]+\.(?:(?=jpe?g|gif|png|tiff|bmp|jpg)|(?=JPE?G|GIF|PNG|TIFF|BMP))[^\'\"]+)(?:\'|\")(?:[^\>]+)?>"
-
+        self.image_regex = "<(?:img|IMG)[^\>]+(?:src|SRC)\s*=\s*(?:\'|\")([^\'\"]+\.(?:(?=jpe?g|gif|png|tiff|bmp|jpg)|(?=JPE?G|GIF|PNG|TIFF|BMP))[^\'\"]+)(?:\'|\")(?:[^\>]+)?>"
+        # [. \n]
     def correct_url(self, url):
         if url:
             # print(url,self.base_url)
             if url.startswith("//"):
-                print(url)
-                print(self.url)
+                # print(url)
+                # print(self.url)
                 return self.url["scheme"] + ":" + url.rstrip("\">")
             elif url.startswith("http"):
                 return url
             elif url.startswith(".."):
-                return self.base_url + url
+                return self.base_url + url.split('..')[1]
             elif url.startswith("/"):
                 return self.base_url + url
             else:
@@ -39,30 +39,24 @@ class Scrape:
                 return _url.scheme + "://" + _url.netloc + "/" + path + "/" + url
 
     def parse_image_urls(self):                             # fetch all image URLs from body tag
-        # print(',,,,,,,,,,')
         img_urls, comp_url = [], []
         string = search(self.body, self.raw_data)
-        print(string)
         if string:
             img_urls.extend(re.findall(self.image_regex, string.group(1)))
-            print('image urls',img_urls)
             for url in set(img_urls):
                 comp_url.append(self.correct_url(url))
-        print(comp_url)
+        # print(comp_url)
         return comp_url
 
     def get_meta(self):
         result, res = {}, {}
         response = []
         metas = re.findall(self.meta_regex, self.raw_data)
-        # print(metas)
         for meta in metas:
             if " content" in meta and " property" in meta:
                 res.update({meta[meta.index(" property") + 1]: meta[meta.index(" content") + 1]})
             elif "content" in meta and "property" in meta:
-                # print('............',meta)
                 res.update({meta[meta.index("property") + 1]: meta[meta.index("content") + 1]})
-                # print(',,,,,,,,,,,',res)
             elif "content" in meta and "name" in meta:
                 res.update({meta[meta.index("name") + 1]: meta[meta.index("content") + 1]})
             elif " content" in meta and " name" in meta:
@@ -121,7 +115,6 @@ class Scrape:
         else:
             result["code"] = ""
         if "og:image" in key:
-            # print(';;;;;;;;;;',key)
             image = Image_size().body_image_fetch(self.correct_url(res["og:image"]), [])
             print('yes', image)
             result["image"] = image

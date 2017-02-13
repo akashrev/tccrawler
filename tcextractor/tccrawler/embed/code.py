@@ -4,19 +4,20 @@ import re
 # url = "https://vimeo.com/moogaloop.swf?clip_id=192650605&amp;autoplay=1"
 def embed_video(url):
     provider_name = (Fetch(url,"").expand_url(url))['provider_name']
-    if provider_name == "vmeo":
-        id = url.split('/')[-1]
-        id = re.search(r'^(clip_id)?(\d+)',id)
-        return id.group(1)
 
-    elif provider_name in ["youtu", "youtube"]:
+    if provider_name in ["youtu", "youtube"]:
         yid = url.split('/')[-1]
         if '?' in yid:
             yid = yid.split('?')[0]
         return '<iframe width="560" height="315" src="https://www.youtube.com/embed/"'+yid+'" frameborder="0" allowfullscreen></iframe>'
 
-    elif provider_name == 'vine':
-        return url
+    elif provider_name == "vmeo":
+        id = url.split('/')[-1]
+        id = re.search(r'^(clip_id)?(\d+)',id)
+        return id.group(1)
+
+    # elif provider_name == 'vine':
+    #     return url
     else:
         return url
 

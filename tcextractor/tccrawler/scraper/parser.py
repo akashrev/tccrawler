@@ -50,7 +50,7 @@ class Fetch:
         header = ""
         if self.url_data:
             head = self.url_data.headers
-            print('......', head)
+            # print('......', head)
             # if head['status']
             header = {
                 "status": int(head['status'].replace(',', ' ').split(' ')[0]) if 'status' in head.keys() else self.url_data.status_code,
@@ -63,5 +63,5 @@ class Fetch:
                 "type": "",
                 "length": "",
             }
-        print('fun header', header)
+        # print('fun header', header)
         return header
