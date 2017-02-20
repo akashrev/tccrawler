@@ -15,10 +15,12 @@ class Scrape:
         self.url = url
         self.raw_data = data.text.replace("\n", "")
         self.head = "<head([\S\D]+)</head>"
-        self.meta_regex = "<meta(?:\s+)?([^=]+)=\"([^\"]+)\"(?:(?:\s+)?([^=/>]+)=\"([^\"]+)\")?(?:(?:\s+)?([^=>/]+)=\"([^\"]+)\")?(?:[^>]+)?>"
+        self.meta_regex = "<meta(?:\s+)?([^=]+)=(?:\'|\")([^\"\']+)(?:\'|\")(?:(?:\s+)?([^=/>]+)=(?:\'|\")([^\"\']+)(?:\'|\"))?(?:(?:\s+)?([^=>/]+)=(?:\'|\")([^\"]+)(?:\'|\"))?(?:[^>]+)?>"
+        # self.meta_regex = "<meta(?:\s+)?([^=]+)=\"([^\"]+)\"(?:(?:\s+)?([^=/>]+)=\"([^\"]+)\")?(?:(?:\s+)?([^=>/]+)=\"([^\"]+)\")?(?:[^>]+)?>"
         self.title_regex = "<title>([^>]+)<\/title>"
         self.body = "<body([\S\D]+)(<\/body ?>)?"
-        self.image_regex = "<(?:img|IMG)[^\>]+(?:src|SRC)\s*=\s*(?:\'|\")([^\'\"]+\.(?:(?=jpe?g|gif|png|tiff|bmp|jpg)|(?=JPE?G|GIF|PNG|TIFF|BMP))[^\'\"]+)(?:\'|\")(?:[^\>]+)?>"
+        self.image_regex = "<(?:img|IMG)[^\>]+(?:src|SRC)\s*=\s*(?:\'|\"|)([^\'\"]+\.(?:(?=jpe?g|gif|png|tiff|bmp|jpg)|(?=JPE?G|GIF|PNG|TIFF|BMP))[^\'\" ]+)(?:\'|\"|)(?:[^\>]+)?>"
+        # self.image_regex = "<(?:img|IMG)[^\>]+(?:src|SRC)\s*=\s*(?:\'|\")([^\'\"]+\.(?:(?=jpe?g|gif|png|tiff|bmp|jpg)|(?=JPE?G|GIF|PNG|TIFF|BMP))[^\'\"]+)(?:\'|\")(?:[^\>]+)?>"
         # [. \n]
     def correct_url(self, url):
         try:
@@ -59,7 +61,10 @@ class Scrape:
             result, res = {}, {}
             response = []
             metas = re.findall(self.meta_regex, self.raw_data)
+            print(type(metas))
             for meta in metas:
+                # print(type(meta))
+                # print(meta)
                 if " content" in meta and " property" in meta:
                     res.update({meta[meta.index(" property") + 1]: meta[meta.index(" content") + 1]})
                 elif "content" in meta and "property" in meta:
@@ -69,7 +74,6 @@ class Scrape:
                 elif " content" in meta and " name" in meta:
                     res.update({meta[meta.index(" name") + 1]: meta[meta.index(" content") + 1]})
             key = res.keys()
-
             if "og:title" in key:
                 result["title"] = res["og:title"]
             elif "twitter:title" in key:
@@ -120,7 +124,9 @@ class Scrape:
             else:
                 result["code"] = ""
             try:
+                print('trying')
                 if "og:image" in key:
+                    print('yeah')
                     image = Image_size().body_image_fetch(self.correct_url(res["og:image"]), [])
                     result["image"] = image
                 elif "twitter:image" in key:

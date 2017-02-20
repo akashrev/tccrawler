@@ -44,7 +44,7 @@ class Fetch:
                         headers={
                             'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
                                           "Chrome/55.0.2883.87 Safari/537.36"
-                        }
+                        }, verify=False
                     )
                 except Exception as e:
                     print(e)
@@ -56,9 +56,9 @@ class Fetch:
         # try:
         header = ""
         if self.url_data:
-            print('.,.,.,.,.,.', self.url_data.headers)
+            # print('.,.,.,.,.,.', self.url_data.headers)
             head = self.url_data.headers
-            print('......', head)
+            # print('......', head)
             # if head['status']
             # print(head)
             # print(head['status'])
@@ -81,6 +81,10 @@ class Fetch:
         #     print(e)
 
     def url_header(self):
-        head = requests.get(self.url)
-        print('url_header head', head.status_code)
-        return head
+        try:
+            head = requests.get(self.url, verify=False)
+            # print(head)
+            # print('url_header head', head[0].status_code if isinstance((head), tuple) else head)
+            return head[0].status_code if isinstance((head), tuple) else head.status_code
+        except Exception as e:
+            print(e)

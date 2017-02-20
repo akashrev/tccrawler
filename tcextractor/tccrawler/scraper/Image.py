@@ -22,8 +22,10 @@ class Image_size:
                         in range(3)]
             elif i.mode == "RGBA":
                 h = i.histogram()
-                return [int(sum(i * w for i, w in enumerate(h[256 * x: 256 * (x + 1)])) / sum(h[256 * x: 256 * (x + 1)])) for x
+                result = [int(sum(i * w for i, w in enumerate(h[256 * x: 256 * (x + 1)])) / sum(h[256 * x: 256 * (x + 1)])) for x
                         in range(4)]
+                result[3] = round(result[3]/255)
+                return result
             elif i.mode == "P":
                 h = i.getpalette()
                 return [int(sum(i * w for i, w in enumerate(h[256 * x: 256 * (x + 1)])) / sum(h[256 * x: 256 * (x + 1)])) for x

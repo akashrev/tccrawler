@@ -16,7 +16,7 @@ def main(input_url, data):
         meta_time = time.time() - start
         start2 = time.time()
         print(meta)
-        if meta is None or "image" not in meta or meta["image"] is None:
+        if meta is None or "image" not in meta or meta["image"] in [None, [], "", (None,), ('',)]:
             parse_image_urls = scrape_obj.parse_image_urls()            # all image URLs
             meta["parse_image_urls_time"] = time.time() - start2
             start3 = time.time()
